@@ -1,0 +1,6 @@
+team,n_games,adf_statistic,p_value,lags_used,stationary_at_5pct
+BOS,67,-8.066,0.0,0,True
+TOR,66,-8.324,0.0,0,True
+LAL,67,-5.599,0.0,2,True
+SAS,67,-4.41,0.0003,1,True
+OKC,67,-7.094,0.0,0,True

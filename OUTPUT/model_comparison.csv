@@ -1,0 +1,7 @@
+model,train_rows,train_accuracy,test_correct,test_games,test_accuracy,ci95_low,ci95_high,share_predicted_win,meets_65pct_goal,beats_home_baseline,identical_predictions_to_always_win
+Home-team baseline,309,0.534,45,76,0.5921,0.4798,0.6956,0.4737,False,False,False
+Always predict win,309,0.6731,57,76,0.75,0.6422,0.8337,1.0,True,True,True
+LR: rolling-5 + home,309,0.6731,57,76,0.75,0.6422,0.8337,1.0,True,True,True
+LR: + ARIMA points,309,0.6731,57,76,0.75,0.6422,0.8337,1.0,True,True,True
+LR: + running mean points,309,0.6731,57,76,0.75,0.6422,0.8337,1.0,True,True,True
+"LR: + ARIMA points, no warm-up rows",234,0.6453,57,76,0.75,0.6422,0.8337,1.0,True,True,True

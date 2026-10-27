@@ -1,0 +1,11 @@
+team,order,fit_status,lag,lb_stat,p_value,residuals_look_white_noise
+BOS,"(0, 0, 0)",ok,5,9.505,0.0905,True
+BOS,"(0, 0, 0)",ok,10,13.635,0.1903,True
+TOR,"(0, 0, 0)",ok,5,1.967,0.8537,True
+TOR,"(0, 0, 0)",ok,10,4.248,0.9355,True
+LAL,"(0, 0, 0)",ok,5,7.209,0.2056,True
+LAL,"(0, 0, 0)",ok,10,13.547,0.1947,True
+SAS,"(0, 0, 0)",ok,5,5.493,0.3588,True
+SAS,"(0, 0, 0)",ok,10,9.615,0.4749,True
+OKC,"(0, 0, 0)",ok,5,5.233,0.3881,True
+OKC,"(0, 0, 0)",ok,10,12.08,0.2797,True

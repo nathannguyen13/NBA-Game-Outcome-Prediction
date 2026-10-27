@@ -1,0 +1,7 @@
+period,forecaster,n_games,MAE,RMSE,max_abs_gap_vs_running_mean
+train,"ARIMA(0, 0, 0)",234,10.927,13.574,0.0
+train,Running (season-to-date) mean,234,10.927,13.574,0.0
+train,Previous-5-game mean,234,11.617,14.437,15.0
+test,"ARIMA(0, 0, 0)",76,11.238,13.993,0.0
+test,Running (season-to-date) mean,76,11.238,13.993,0.0
+test,Previous-5-game mean,76,12.621,15.41,10.625
