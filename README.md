@@ -49,7 +49,7 @@ NBA-Game-Outcome-Prediction/
 │   ├── model_dataset.csv                  # Eligible observations and split labels
 │   ├── arima_forecasts.csv                # One-step-ahead points forecasts
 │   └── final_analysis_dataset.csv         # Modeling data joined to ARIMA forecasts
-├── SCRIPT/
+├── SCRIPTS/
 │   ├── 01_clean_and_engineer_features.py  # Validation, rolling features, train/test labels
 │   ├── 02_exploratory_analysis.py         # Exploratory figures
 │   ├── 03_arima_forecasts.py              # ARIMA selection and walk-forward forecasts
@@ -64,7 +64,7 @@ NBA-Game-Outcome-Prediction/
     └── model_comparison.csv               # Test results and confidence intervals
 ```
 
-The directory is named **`SCRIPT`**, singular. The project uses `.py` files, not a single `.ipynb` notebook. All processed CSVs are saved directly inside `DATA/`; plots and the comparison table are saved directly inside `OUTPUT/`.
+The directory is named **`SCRIPTS`**, singular. The project uses `.py` files, not a single `.ipynb` notebook. All processed CSVs are saved directly inside `DATA/`; plots and the comparison table are saved directly inside `OUTPUT/`.
 
 ## Data and Preprocessing
 
@@ -121,10 +121,10 @@ On systems where `python` does not point to Python 3, substitute `python3`. The 
 Run these commands **from the repository root**:
 
 ```bash
-python SCRIPT/01_clean_and_engineer_features.py
-python SCRIPT/02_exploratory_analysis.py
-python SCRIPT/03_arima_forecasts.py
-python SCRIPT/04_logistic_regression.py
+python SCRIPTS/01_clean_and_engineer_features.py
+python SCRIPTS/02_exploratory_analysis.py
+python SCRIPTS/03_arima_forecasts.py
+python SCRIPTS/04_logistic_regression.py
 ```
 
 - **Script 01** reads the five raw CSVs, validates them, computes leakage-free rolling features, and writes `DATA/all_games_clean.csv` and `DATA/model_dataset.csv`.
@@ -132,7 +132,7 @@ python SCRIPT/04_logistic_regression.py
 - **Script 03** checks stationarity using the Augmented Dickey–Fuller test, compares ARIMA(p,0,q) specifications with p and q from 0 to 2 using training-data AIC, and produces expanding-window, one-step-ahead forecasts in `DATA/arima_forecasts.csv`. It also prints forecast error comparisons against the previous-five-game mean.
 - **Script 04** joins forecasts to the modeling data, saves `DATA/final_analysis_dataset.csv`, trains and evaluates the classifiers, and writes `OUTPUT/model_comparison.csv`, `fig06_model_accuracy_comparison.png`, and `fig07_confusion_matrices.png`.
 
-`SCRIPT/plot_style.py` is imported by other scripts; **do not run it separately**. Script 03 repeatedly fits ARIMA models and may take longer than the other steps.
+`SCRIPTS/plot_style.py` is imported by other scripts; **do not run it separately**. Script 03 repeatedly fits ARIMA models and may take longer than the other steps.
 
 ### 4. Check the outputs
 
